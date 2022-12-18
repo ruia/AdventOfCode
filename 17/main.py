@@ -15,5 +15,5 @@ def main():
     # print(f"Total part 2 input: {part_two(input)}")
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
