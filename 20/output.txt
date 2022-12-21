@@ -1,0 +1,2 @@
+Total part 1 test: 3.0
+Total part 1 input: 1141.0
