@@ -25,14 +25,32 @@ def part_one(input_file):
 
         return jobs['root']
 
-def part_one(input_file):
+def part_two(input_file):
     jobs = {}
     with open(input_file) as f:
         for line in f:
             line = line.strip().split(': ')
             if (line[0] == 'root'):
                 jobs[line[0]] = line[1].replace('+', '=')
-            jobs[line[0]] = line[1]
+            else:
+                jobs[line[0]] = line[1]
+
+        all_digit = False
+        while (not all_digit):
+            for monkey in reversed(jobs):
+                if not str(jobs[monkey]).isdigit() and str(jobs[monkey] != 'humn'):
+                    tmp = jobs[monkey].split(' ')
+                    if str(jobs[tmp[0]]).isdigit() and str(jobs[tmp[2]]).isdigit():
+                        jobs[monkey] = int(eval(str(jobs[tmp[0]]) + tmp[1] + str(jobs[tmp[2]])))
+            tmp = []
+            for monkey in jobs:
+                if str(jobs[monkey]).isdigit():
+                   tmp.append(True)
+                else:
+                    tmp.append(False)
+
+            if not False in tmp:
+                all_digit = True
 
         return jobs['root']
 
