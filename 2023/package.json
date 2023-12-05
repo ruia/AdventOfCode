@@ -5,6 +5,9 @@
   "author": "Rui Almeida",
   "scripts": {
     "01" : "node 01/main.js",
+    "02" : "node 02/main.js",
+    "03" : "node 03/main.js",
+    "04" : "node 04/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC"
