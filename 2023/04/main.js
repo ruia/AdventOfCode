@@ -49,6 +49,7 @@ try {
         }
         total += card.total;
     });
+    
     console.log('TOTAL:', total);
 
 } catch (err) {

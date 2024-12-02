@@ -8,6 +8,7 @@
     "02" : "node 02/main.js",
     "03" : "node 03/main.js",
     "04" : "node 04/main.js",
+    "05" : "export NODE_OPTIONS=--max-old-space-size=16384 && node 05/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC"
